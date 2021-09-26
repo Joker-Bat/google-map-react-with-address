@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Google map integration for React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## !!! Make sure to enter your Google map API key in apiKey.js file, and also activate the places service when generating a API key.
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+## Getting started
 
-### `npm start`
+> Run in local machine
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone this repo into your machine and run
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```js
+  npm install && npm run start
+```
 
-### `npm test`
+> Run in Codesandbox
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Link to Codesandbox [Google-Map-React](https://codesandbox.io/s/google-map-react-with-address-qnyov)
 
-### `npm run build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Packages used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [google-map-react](https://www.npmjs.com/package/google-map-react)
+  - To show a map, and to get lat, lng of location
+- [react-geocode](https://www.npmjs.com/package/react-geocode)
+  - To get readable address from lat, lng of location
+- [react-google-autocomplete](https://www.npmjs.com/package/react-google-autocomplete)
+  - Used to set searchbar, to autocomplete location details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+### Current location from browser
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- At initial load we will get current location from browser using geolocation API. ( Only If we allow the location permission )
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Get address details as we drag
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Based on center position of map we will get a readable address details on bottom of map.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Search for places in searchbar
 
-## Learn More
+- In top searchbar search for places, if you choose one location then map will move to that location, and we will get that places address.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Custom Current location button
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- There is a custom current location button to move back to your current location
 
-### Code Splitting
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### This can be useful to someone who is getting started with google map integration on react
 
-### Analyzing the Bundle Size
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## If you find any issue or have suggestion make a pull request 😉

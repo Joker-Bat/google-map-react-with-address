@@ -1,0 +1,69 @@
+.MapContainer {
+  max-width: 400px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  border-radius: 7px;
+
+  .AutoCompleteContainer {
+    width: 100%;
+    margin: 2px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    input {
+      background-color: rgba(#ffffff, 0.9);
+      width: calc(100% - 10px);
+      font-size: 12px;
+      padding: 8px 0 8px 10px;
+      border: none;
+      outline: none;
+      border-radius: 7px;
+    }
+  }
+
+  .Marker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 24px;
+  }
+
+  .Marker svg {
+    color: #615c5c;
+    width: 100%;
+    height: 100%;
+  }
+
+  .CurrentLocation {
+    border: none;
+    position: absolute;
+    top: 60%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: #666666;
+    outline: none;
+  }
+
+  .CurrentLocation:hover {
+    color: #333333;
+  }
+
+  .CurrentLocation:active {
+    color: #000000;
+  }
+}
